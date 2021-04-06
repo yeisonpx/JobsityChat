@@ -24,12 +24,15 @@ docker-compose up
 docker pull rabbitmq:3-management
 docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 ```
-2. Open project solution with Visual Studio.
-3. Set JobSityChat.Bot and JobSityChat.Web as Startup Project.
-4. Run the applications. 
+2. Open project solution with Visual Studio:
+4. Set JobSityChat.Bot and JobSityChat.Web as Startup Project.
+5. Run the application. 
 
-## Consideration Testing Chat:
-1. Project have .Net Identity so requere, to register and valide a user first. 
+## Consideration Testing:
+1. Project have .Net Identity so required to register and valide a user first. 
 2. Login to see the chat. 
+3. Ensure to have running RabbitMQ on port 5672 
+4. Have installed .Net Core 3.1
+5. Run the project with Visual Studio(Recommend 2019+)
 
 Let me know if you have any questions :)
