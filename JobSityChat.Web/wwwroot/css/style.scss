@@ -1,0 +1,23 @@
+﻿#message-container{
+    min-height:400px;
+}
+ul.message-list {
+    li.messageItem {
+        display: flex;
+        text-align: left;
+        border: 1px solid rgba(0,0,0,.125);
+        padding: 3px;
+        margin: 5px;
+        flex-direction: column;
+        border-radius: 0.25rem;
+
+        .messageHeader {
+            display: block;
+            color: #808080;
+            font-size: 0.8em;
+        }
+    }
+}
+
+.messageHeader {
+}

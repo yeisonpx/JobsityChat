@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.Hidden("CurrentUserId", User.Identity.Name)
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <h1 class="display-4">Welcome to JobSity Chat</h1>
+        <div class="container card card-body bg-secondary">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-column">
+                        <div class="card card-body" id="message-container">
+                            <ul class="message-list">
+                            </ul>
+                        </div>
+                        <div class="card card-body text-right mt-2">
+                            <div class="form-group">
+                                <textarea name="message-text" id="message-text" class="form-control" placeholder="Write a message"></textarea>
+                            </div>
+                            <div class="text-right">
+                                <button class="btn btn-sm btn-outline-primary" id="btnSendMessage"> Send</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts{
+        <script src="~/js/signalr/dist/browser/signalr.min.js"></script>
+        <script src="~/js/chat.js"></script>
+    }
+}
+else
+{
+    <div class="alert alert-info">
+        User is not authenticated, please login to see an awasome chat :)
+    </div>
+    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+}
