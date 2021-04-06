@@ -5,7 +5,7 @@
  ```
  git clone https://github.com/yeisonpx/JobsityChat.git
  ```
- 2. Open a CMD Console or Terminar in Linex and change the directory of the root folder JobsityChat.
+ 2. Open a CMD Console or Terminar in Linux and change the directory of the root folder JobsityChat.
  3. Execute Docker-Compose Commands:
 
  ```
